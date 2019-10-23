@@ -16,18 +16,15 @@ import UIKit
 struct Questions {
     let mAnswer: String
     let mQuestionText: String
-    
-    
-    func String getQuestion(){
-        return mQuestionText
-    }
-    func String getAnswer(){
-        return mAnswer
-    }
 };
 //Main View Controller
 class QuizViewController: UIViewController {
-
+    
+    var mCurrentIndex = 0;
+    var mCurrentAnswer = "none"
+    var mCurrentQuestion = "Sample Question"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,11 +36,15 @@ class QuizViewController: UIViewController {
             let mQuestion4 = Questions(mAnswer: "D", mQuestionText: "Select D")
             let mQuestion5 = Questions(mAnswer: "A", mQuestionText: "Select A")
         let mQuestionBank = [mQuestion1, mQuestion2, mQuestion3, mQuestion4, mQuestion5]
-        
-        
-        
-        
-        
-    }
 
+    }
+    //Source of Reference when workin with functions: https://docs.swift.org/swift-book/LanguageGuide/Functions.html
+    func getQuestion(index: Int) -> (Question: String, Answer: String)  {
+        return ("Hello", "World")
+    }
+    
+    func getFinishingText(type: String) -> String{
+        //Being worked on as I am figuring out the varaibles part with segues
+        return "Swipe Down if Screen is purple, Hit back if blue"
+    }
 }
