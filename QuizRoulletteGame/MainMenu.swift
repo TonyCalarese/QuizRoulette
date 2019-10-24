@@ -1,8 +1,8 @@
 //
-//  GameScene.swift
+//  GameViewController.swift
 //  QuizRoulletteGame
 //
-//  Created by Zeus on 10/16/19.
+//  Created by Tony Calarese on 10/16/19.
 //  Copyright © 2019 Tony Calarese. All rights reserved.
 //
 

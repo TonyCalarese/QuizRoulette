@@ -15,7 +15,9 @@
 		C08A9C382357D51600952DC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08A9C362357D51600952DC3 /* LaunchScreen.storyboard */; };
 		C08A9C422357D85400952DC3 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A9C402357D85400952DC3 /* MainMenu.swift */; };
 		C08A9C432357D85400952DC3 /* MainMenuEffects.sks in Resources */ = {isa = PBXBuildFile; fileRef = C08A9C412357D85400952DC3 /* MainMenuEffects.sks */; };
-		C0CE0FC12360DDBA00078D75 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE0FC02360DDBA00078D75 /* QuizViewController.swift */; };
+		C0CE0FC12360DDBA00078D75 /* PressingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE0FC02360DDBA00078D75 /* PressingViewController.swift */; };
+		C0CE0FC523613E6900078D75 /* SwipingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE0FC423613E6900078D75 /* SwipingViewController.swift */; };
+		C0CE0FC723613EBC00078D75 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE0FC623613EBC00078D75 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +32,9 @@
 		C08A9C3F2357D52500952DC3 /* QuizRoulletteGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuizRoulletteGame.entitlements; sourceTree = "<group>"; };
 		C08A9C402357D85400952DC3 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		C08A9C412357D85400952DC3 /* MainMenuEffects.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenuEffects.sks; sourceTree = "<group>"; };
-		C0CE0FC02360DDBA00078D75 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		C0CE0FC02360DDBA00078D75 /* PressingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressingViewController.swift; sourceTree = "<group>"; };
+		C0CE0FC423613E6900078D75 /* SwipingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingViewController.swift; sourceTree = "<group>"; };
+		C0CE0FC623613EBC00078D75 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,9 @@
 				C08A9C272357D51500952DC3 /* AppDelegate.swift */,
 				C08A9C2B2357D51500952DC3 /* Actions.sks */,
 				C08A9C2F2357D51500952DC3 /* GameViewController.swift */,
-				C0CE0FC02360DDBA00078D75 /* QuizViewController.swift */,
+				C0CE0FC02360DDBA00078D75 /* PressingViewController.swift */,
+				C0CE0FC423613E6900078D75 /* SwipingViewController.swift */,
+				C0CE0FC623613EBC00078D75 /* Question.swift */,
 				C08A9C312357D51500952DC3 /* Main.storyboard */,
 				C08A9C342357D51600952DC3 /* Assets.xcassets */,
 				C08A9C362357D51600952DC3 /* LaunchScreen.storyboard */,
@@ -152,8 +158,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C08A9C302357D51500952DC3 /* GameViewController.swift in Sources */,
-				C0CE0FC12360DDBA00078D75 /* QuizViewController.swift in Sources */,
+				C0CE0FC12360DDBA00078D75 /* PressingViewController.swift in Sources */,
 				C08A9C282357D51500952DC3 /* AppDelegate.swift in Sources */,
+				C0CE0FC723613EBC00078D75 /* Question.swift in Sources */,
+				C0CE0FC523613E6900078D75 /* SwipingViewController.swift in Sources */,
 				C08A9C422357D85400952DC3 /* MainMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
