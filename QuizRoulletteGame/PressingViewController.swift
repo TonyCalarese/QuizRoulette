@@ -51,7 +51,7 @@ class PressingViewController: UIViewController {
        
          //This function will stop the questions from filling the area and then make sure that the user goes backwards.
          func getFinishingText() -> String{ //Being worked on as I am figuring out the varaibles part with segues
-             return "You got a Score of " + String(mScore) + " Correct! Press Back to go to next section"
+             return "You got a Score of " + String(mScore) + " Correct! \nPress Back to go to next section"
          }
        
       
