@@ -53,7 +53,7 @@
             <objects>
                 <viewController id="sV6-Kz-Fsu" customClass="SwipingViewController" customModule="QuizRoulletteGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wWe-p2-mtD">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1007"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAr-oW-qOa">
@@ -84,9 +84,6 @@
                                 <state key="normal" title="D">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="mD_Clicked:" destination="VjQ-sh-8xG" eventType="touchUpInside" id="vZj-4G-AXa"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kL6-RO-b4I">
                                 <rect key="frame" x="137" y="20" width="439" height="285"/>
@@ -103,13 +100,13 @@
                     <navigationItem key="navigationItem" id="07D-y1-jZ0"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="mQuestionLabel" destination="kL6-RO-b4I" id="2W1-bi-3Fc"/>
+                        <outlet property="mQuestionLabel" destination="kL6-RO-b4I" id="ovp-na-thY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OfW-vE-aJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="kLf-YZ-uKL"/>
             </objects>
-            <point key="canvasLocation" x="1991.3669064748203" y="-216.36690647482015"/>
+            <point key="canvasLocation" x="842" y="-216"/>
         </scene>
         <!--Pressing View Controller-->
         <scene sceneID="8s1-r6-R30">
@@ -159,6 +156,9 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="mD_Clicked:" destination="VjQ-sh-8xG" eventType="touchUpInside" id="uNi-b0-hgJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkU-Yr-h7p">
                                 <rect key="frame" x="174" y="155" width="439" height="285"/>
@@ -173,12 +173,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="gWY-sp-248"/>
                     <connections>
-                        <outlet property="mQuestionLabelPress" destination="lkU-Yr-h7p" id="AkM-nJ-n9m"/>
+                        <outlet property="mQuestionLabel" destination="lkU-Yr-h7p" id="KhG-4g-Qta"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewf-CV-LM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1990.6474820143887" y="591.9064748201439"/>
+            <point key="canvasLocation" x="-366" y="497"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DiM-5B-awD">
