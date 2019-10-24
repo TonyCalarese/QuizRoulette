@@ -26,7 +26,7 @@ class SwipingViewController: UIViewController {
            super.viewDidLoad()
            getQuestion() //Will always go to the first question because of the index being 0 on start
     //Source: https://github.com/calebrwells/A-Swiftly-Tilting-Planet/blob/master/2018/UIGestureRecognizers/Handling%20Swipe%20Gestures/Handling%20Swipe%20Gestures/ViewController.swift
-           
+    //https://developer.apple.com/documentation/uikit/touches_presses_and_gestures/handling_uikit_gestures/handling_swipe_gestures
             let ASwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
             ASwipe.direction = .up
             let BSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
@@ -62,14 +62,15 @@ class SwipingViewController: UIViewController {
     
        //Core Class Functions
        func processAnswer(answer: String) -> Void {
-            adjustScore(correctness: mQuestionBank[mCurrentIndex].compare(UAnswer: answer)) //Adjust the score first
+             
             //then check for the next question
             if mCurrentIndex == mQuestionBank.count - 1 //Want to make sure we do not go out of range
             { //If they have answered all the questions do not compare anwers anymore
-                self.mQuestionLabel.text = getFinishingText()
+                self.mQuestionLabel.text = "STOP, SEE TONY"
             }
             else
             {
+                adjustScore(correctness: mQuestionBank[mCurrentIndex].compare(UAnswer: answer)) //Adjust the score first
                 mCurrentIndex+=1 //if there are questions then go to the next question
                 getQuestion()
             }
@@ -83,11 +84,6 @@ class SwipingViewController: UIViewController {
          //Source: https://stackoverflow.com/questions/24275632/how-do-i-change-text-in-a-label-with-swift
          func getQuestion() -> Void{
             self.mQuestionLabel.text = mQuestionBank[mCurrentIndex].mQuestionText
-         }
-       
-         //This function will stop the questions from filling the area and then make sure that the user goes backwards.
-         func getFinishingText() -> String{ //Being worked on as I am figuring out the varaibles part with segues
-             return "You got a Score of " + String(mScore) + " Correct! Press Back to go to next section"
          }
        
     @IBOutlet weak var mQuestionLabel: UILabel!

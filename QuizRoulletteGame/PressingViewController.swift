@@ -26,14 +26,15 @@ class PressingViewController: UIViewController {
        
        //Core Class Functions
        func processAnswer(answer: String) -> Void {
-            adjustScore(correctness: mQuestionBank[mCurrentIndex].compare(UAnswer: answer)) //Adjust the score first
+            
             //then check for the next question
             if mCurrentIndex == mQuestionBank.count - 1 //Want to make sure we do not go out of range
             { //If they have answered all the questions do not compare anwers anymore
-                self.mQuestionLabel.text = getFinishingText()
+                self.mQuestionLabel.text = "STOP, SEE TONY"
             }
             else
             {
+                adjustScore(correctness: mQuestionBank[mCurrentIndex].compare(UAnswer: answer)) //Adjust the score first
                 mCurrentIndex+=1 //if there are questions then go to the next question
                 getQuestion()
             }
