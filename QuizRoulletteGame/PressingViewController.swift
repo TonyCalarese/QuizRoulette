@@ -13,14 +13,14 @@ class PressingViewController: UIViewController {
     var mCurrentIndex = 0 //Will Act as the Current Index that the user is on
     var mScore = 0 //Will act as the users Score
     //Initialize Questions
-    let mQuestionBank = [Questions(Answer: "A", Question: "SWIPE UP"),
-                         Questions(Answer: "B", Question: "SWIPE DOWN"),
-                         Questions(Answer: "C", Question: "SWIPE LEFT"),
-                         Questions(Answer: "D", Question: "SWIPE RIGHT"),
-                         Questions(Answer: "A", Question: "SWIPE UP"),
-                         Questions(Answer: "B", Question: "SWIPE DOWN"),
-                         Questions(Answer: "C", Question: "SWIPE LEFT"),
-                         Questions(Answer: "D", Question: "SWIPE RIGHT")]
+    let mQuestionBank = [Questions(Answer: "A", Question: "PRESS A"),
+                         Questions(Answer: "B", Question: "PRESS B"),
+                         Questions(Answer: "C", Question: "PRESS C"),
+                         Questions(Answer: "D", Question: "PRESS D"),
+                         Questions(Answer: "A", Question: "PRESS A"),
+                         Questions(Answer: "B", Question: "PRESS B"),
+                         Questions(Answer: "C", Question: "PRESS C"),
+                         Questions(Answer: "D", Question: "PRESS D")]
     
     //On Load
        override func viewDidLoad() {
