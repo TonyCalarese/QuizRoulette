@@ -11,7 +11,7 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    let USER = User();
     override func viewDidLoad() {
         super.viewDidLoad()
         

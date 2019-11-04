@@ -1,30 +1,25 @@
 //
-//  GameViewController.swift
+//  OldSwiping.swift
 //  QuizRoulletteGame
 //
-//  Created by Tony Calarese on 10/16/19.
+//  Created by Zeus on 10/30/19.
 //  Copyright © 2019 Tony Calarese. All rights reserved.
 //
+
 import Foundation
-import UIKit
-
-
-
+/*
 //Main View Controller
-class SwipingViewController: UIViewController {
+class SwipingViewControllerOLD: UIViewController {
       //Getting the Current Index that the user is on
     var mCurrentIndex = 0 //Will Act as the Current Index that the user is on
+    var mScore = 0 //Will act as the users Score
     //Initialize Questions
-    let user = User();
     let mQuestionBank = [Questions(Answer: "A", Question: "SWIPE UP"),
                          Questions(Answer: "B", Question: "SWIPE DOWN"),
                          Questions(Answer: "C", Question: "SWIPE LEFT"),
                          Questions(Answer: "D", Question: "SWIPE RIGHT"),
-                         Questions(Answer: "A", Question: "SWIPE UP"),
-                         Questions(Answer: "B", Question: "SWIPE DOWN"),
-                         Questions(Answer: "C", Question: "SWIPE LEFT"),
-                         Questions(Answer: "D", Question: "SWIPE RIGHT")]
-    
+                         Questions(Answer: "A", Question: "SWIPE UP")]
+    let mViewControllerKey = "SWIPE" // Setting the key to SWIPE to communicate with the questions and User correctly
     //On Load
        override func viewDidLoad() {
            super.viewDidLoad()
@@ -70,6 +65,7 @@ class SwipingViewController: UIViewController {
     
        //Core Class Functions
        func processAnswer(answer: String) -> Void {
+             
             //then check for the next question
             if mCurrentIndex == mQuestionBank.count - 1 //Want to make sure we do not go out of range
             { //If they have answered all the questions do not compare anwers anymore
@@ -77,12 +73,16 @@ class SwipingViewController: UIViewController {
             }
             else
             {
-                if mQuestionBank[mCurrentIndex].compare(UAnswer: answer) == true {user.adjScore()}
+                adjustScore(correctness: mQuestionBank[mCurrentIndex].compare(UAnswer: answer)) //Adjust the score first
                 mCurrentIndex+=1 //if there are questions then go to the next question
                 getQuestion()
             }
         }
          
+         //Checking if the user was correct with their answers
+         func adjustScore(correctness: Bool) -> Void{
+            if correctness == true {mScore+=1}
+         }
          //Get the Current Questions
          //Source: https://stackoverflow.com/questions/24275632/how-do-i-change-text-in-a-label-with-swift
          func getQuestion() -> Void{
@@ -94,3 +94,5 @@ class SwipingViewController: UIViewController {
 
 
 }
+ */
+

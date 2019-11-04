@@ -13,11 +13,15 @@ class PressingViewController: UIViewController {
     var mCurrentIndex = 0 //Will Act as the Current Index that the user is on
     var mScore = 0 //Will act as the users Score
     //Initialize Questions
-    let mQuestionBank = [Questions(Answer: "A", Question: "Select A"),
-                         Questions(Answer: "B", Question: "Select B"),
-                         Questions(Answer: "C", Question: "Select C"),
-                         Questions(Answer: "D", Question: "Select D"),
-                         Questions(Answer: "A", Question: "Select A")]
+    let mQuestionBank = [Questions(Answer: "A", Question: "SWIPE UP"),
+                         Questions(Answer: "B", Question: "SWIPE DOWN"),
+                         Questions(Answer: "C", Question: "SWIPE LEFT"),
+                         Questions(Answer: "D", Question: "SWIPE RIGHT"),
+                         Questions(Answer: "A", Question: "SWIPE UP"),
+                         Questions(Answer: "B", Question: "SWIPE DOWN"),
+                         Questions(Answer: "C", Question: "SWIPE LEFT"),
+                         Questions(Answer: "D", Question: "SWIPE RIGHT")]
+    
     //On Load
        override func viewDidLoad() {
            super.viewDidLoad()
@@ -50,13 +54,8 @@ class PressingViewController: UIViewController {
             self.mQuestionLabel.text = mQuestionBank[mCurrentIndex].mQuestionText
          }
        
-         //This function will stop the questions from filling the area and then make sure that the user goes backwards.
-         func getFinishingText() -> String{ //Being worked on as I am figuring out the varaibles part with segues
-             return "You got a Score of " + String(mScore) + " Correct! \nPress Back to go to next section"
-         }
-       
       
-
+    //Source for color switching: https://github.com/calebrwells/A-Swiftly-Tilting-Planet/blob/master/2018/UIGestureRecognizers/Handling%20Swipe%20Gestures/Handling%20Swipe%20Gestures/ViewController.swift
     
     //Declaring the Buttons Page
     //@IBOutlet weak var mQuestionLabel: UILabel!
@@ -67,18 +66,22 @@ class PressingViewController: UIViewController {
     @IBAction func mA_Clicked(_ sender: Any) {
         print("You Currently Selected A")
         processAnswer(answer: "A")
+        view.backgroundColor = .systemRed
     }
     @IBAction func mB_Clicked(_ sender: Any) {
         print("You Currently Selected B")
         processAnswer(answer: "B")
+        view.backgroundColor = .systemPink
     }
     @IBAction func mC_Clicked(_ sender: Any) {
         print("You Currently Selected C")
         processAnswer(answer: "C")
+        view.backgroundColor = .systemTeal
     }
     @IBAction func mD_Clicked(_ sender: Any) {
         print("You Currently Selected D")
         processAnswer(answer: "D")
+        view.backgroundColor = .systemOrange
     }
   
     
