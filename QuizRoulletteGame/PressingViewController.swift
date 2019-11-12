@@ -11,8 +11,8 @@ import UIKit
 class PressingViewController: UIViewController {
     //Getting the Current Index that the user is on
     var mCurrentIndex = 0 //Will Act as the Current Index that the user is on
-    var mScore = 0 //Will act as the users Score
     //Initialize Questions
+    let user = User();
     let mQuestionBank = [Questions(Answer: "A", Question: "PRESS A"),
                          Questions(Answer: "B", Question: "PRESS B"),
                          Questions(Answer: "C", Question: "PRESS C"),
@@ -30,24 +30,20 @@ class PressingViewController: UIViewController {
        
        //Core Class Functions
        func processAnswer(answer: String) -> Void {
-            
+            if mQuestionBank[mCurrentIndex].compare(UAnswer: answer) == true {user.adjScore()}
             //then check for the next question
             if mCurrentIndex == mQuestionBank.count - 1 //Want to make sure we do not go out of range
             { //If they have answered all the questions do not compare anwers anymore
-                self.mQuestionLabel.text = "STOP, SEE TONY"
+                self.mQuestionLabel.text = "STOP, SEE TONY " + String(user.getCorrect())
             }
             else
             {
-                adjustScore(correctness: mQuestionBank[mCurrentIndex].compare(UAnswer: answer)) //Adjust the score first
+                
                 mCurrentIndex+=1 //if there are questions then go to the next question
                 getQuestion()
             }
         }
          
-         //Checking if the user was correct with their answers
-         func adjustScore(correctness: Bool) -> Void{
-            if correctness == true {mScore+=1}
-         }
          //Get the Current Questions
          //Source: https://stackoverflow.com/questions/24275632/how-do-i-change-text-in-a-label-with-swift
          func getQuestion() -> Void{

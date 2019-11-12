@@ -70,14 +70,15 @@ class SwipingViewController: UIViewController {
     
        //Core Class Functions
        func processAnswer(answer: String) -> Void {
+        if mQuestionBank[mCurrentIndex].compare(UAnswer: answer) == true {user.adjScore()}
             //then check for the next question
             if mCurrentIndex == mQuestionBank.count - 1 //Want to make sure we do not go out of range
             { //If they have answered all the questions do not compare anwers anymore
-                self.mQuestionLabel.text = "STOP, SEE TONY"
+                self.mQuestionLabel.text = "STOP, SEE TONY " + String(user.getCorrect())
             }
             else
             {
-                if mQuestionBank[mCurrentIndex].compare(UAnswer: answer) == true {user.adjScore()}
+                
                 mCurrentIndex+=1 //if there are questions then go to the next question
                 getQuestion()
             }
