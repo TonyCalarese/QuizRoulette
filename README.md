@@ -1,9 +1,9 @@
 # QuizRoulette
 ## Requirements
-# Mac Device
+### Mac Device
 Specifically running Version 10.15.1 (Catalina OS)
-## Optional Devices:
-# iPad 
+### Optional Devices:
+#### iPad 
 The application was designed to run on an Ipad mini 5th Generation running Ipad os 13.2
 ## About
 This IOS application is designed to give the Human Computer interaction experience of giving the user two 8 question muliple choice quizes. But the input methodologies differ between having to swipe in a specific dirrection and that of pressing buttons with the correct answer.
